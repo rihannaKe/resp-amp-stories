@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+
+    <style amp-custom="">
+        amp-story-grid-layer.top {
+            -ms-flex-line-pack: start;
+            align-content: start;
+            -ms-flex-align: start;
+            align-items: start
+        }
+
+        amp-story-grid-layer.center {
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        amp-story-grid-layer.center-text {
+            text-align: center;
+        }
+
+        amp-story-grid-layer.bottom {
+            -ms-flex-line-pack: end;
+            align-content: end;
+            -ms-flex-align: end;
+            align-items: end
+        }
+
+        amp-story-grid-layer.noedge {
+            padding: 0
+        }
+
+        amp-story-cta-layer.mobile-only {
+            display: block
+        }
+
+        [template="fill"] {
+            color: #fff
+        }
+
+        .desktop-only {
+            display: none
+        }
+
+        .mobile-only {
+            display: block
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.17rem;
+        }
+
+        h5 {
+            font-size: 0.83rem;
+        }
+
+        h6 {
+            font-size: 0.67rem;
+        }
+
+        .dark-color {
+            color: black;
+        }
+
+        .light-color {
+            color: white;
+        }
+
+        .gradient-dark-bottom {
+            background: linear-gradient(to bottom, transparent 15%, transparent 15%, rgba(0, 0, 0, 0.75))
+        }
+
+        .gradient-dark-top {
+            background: linear-gradient(to top, transparent, transparent 15%, rgba(0, 0, 0, 0.75))
+        }
+
+        .gradient-light-bottom {
+            background: linear-gradient(to bottom, transparent, transparent 15%, rgba(255, 255, 255, 0.75))
+        }
+
+        .gradient-light-top {
+            background: linear-gradient(to top, transparent, transparent 15%, rgba(255, 255, 255, 0.75))
+        }
+
+        .th-mild {
+            background: #1d2053;
+            background: -moz-linear-gradient(top, #1d2053 0, #37b1ab 100%);
+            background: -webkit-linear-gradient(top, #1d2053 0, #37b1ab 100%);
+            background: linear-gradient(to bottom, #1d2053 0, #37b1ab 100%);
+        }
+
+        .th-forset {
+            background: #000428;
+            background: -moz-linear-gradient(top, #000428 0, #004e92 100%);
+            background: -webkit-linear-gradient(top, #000428 0, #004e92 100%);
+            background: linear-gradient(to bottom, #000428 0, #004e92 100%);
+        }
+
+        .th-dawn {
+            background: #f3904f;
+            background: -moz-linear-gradient(top, #f3904f 0, #3b4371 100%);
+            background: -webkit-linear-gradient(top, #f3904f 0, #3b4371 100%);
+            background: linear-gradient(to bottom, #f3904f 0, #3b4371 100%);
+        }
+
+        .th-zinc {
+            background: #ada996;
+            background: -moz-linear-gradient(top, #ada996 0, #f2f2f2 100%);
+            background: -webkit-linear-gradient(top, #ada996 0, #f2f2f2 100%);
+            background: linear-gradient(to bottom, #ada996 0, #f2f2f2 100%);
+        }
+
+        .th-rosy {
+            background: #fbc2eb;
+            background: -moz-linear-gradient(top, #fbc2eb 0, #a6c1ee 100%);
+            background: -webkit-linear-gradient(top, #fbc2eb 0, #a6c1ee 100%);
+            background: linear-gradient(to bottom, #fbc2eb 0, #a6c1ee 100%);
+        }
+
+        .th-rainy {
+            background: #cfd9df;
+            background: -moz-linear-gradient(top, #cfd9df 0, #e2ebf0 100%);
+            background: -webkit-linear-gradient(top, #cfd9df 0, #e2ebf0 100%);
+            background: linear-gradient(to bottom, #cfd9df 0, #e2ebf0 100%);
+        }
+
+        /* desktop mobile reorder right to Top, left to Top*/
+        amp-story-page.sideToTop .grid-area {
+            grid-area: lower-third / lower-third / lower-third / lower-third
+        }
+
+        amp-story-page.sideToTop amp-story-grid-layer {
+            height: 50%
+        }
+
+        amp-story-page.sideToTop amp-story-grid-layer img {
+            object-fit: contain;
+        }
+
+        @media(min-width:750px) {
+            amp-story-page.sideToTop .grid-area {
+                grid-area: upper-third / upper-third / upper-third / upper-third;
+            }
+
+            amp-story-page.sideToTop amp-story-grid-layer {
+                height: 100%
+            }
+
+            amp-story-page.sideToTop amp-story-grid-layer img {
+                object-fit: cover;
+            }
+
+            .desktop-center {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <amp-story standalone supports-landscape title="" publisher=""
+        publisher-logo-src=""
+        poster-portrait-src=""
+        poster-square-src=""
+        poster-landscape-src="">
+
+        <amp-story-page id="cover" class="th-mild">
+            <amp-story-grid-layer template="vertical" class="light-color desktop-center">
+                <div animate-in="fly-in-bottom">
+                    <h1>Create responsive amp-stories</h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="th-mild" class="th-forset">
+            <amp-story-grid-layer template="vertical" class="desktop-center">
+                <div class="light-color">
+                    <h1>
+                        h1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </h1>
+                    <h2>
+                        h2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </h2>
+                    <h3>
+                        h3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </h3>
+                    <h4>
+                        h4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </h4>
+                    <h5>
+                        h5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </h5>
+                    <h6>
+                        h6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </h6>
+                    <p>
+                        p. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </p>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="dark-backgrounds">
+            <amp-story-grid-layer template="thirds" class="noedge light-color center-text">
+                <div gird-area="upper-third" class="th-forset">
+                    <h2>th-forset</h2>
+                </div>
+                <div gird-area="middle-third" class="th-mild">
+                    <h2>th-mild</h2>
+                </div>
+                <div gird-area="lower-third" class="th-dawn">
+                    <h2>th-dawn</h2>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="light-backgrounds">
+            <amp-story-grid-layer template="thirds" class="noedge center-text">
+                <div gird-area="upper-third" class="th-zinc">
+                    <h2>th-zinc</h2>
+                </div>
+                <div gird-area="middle-third" class="th-rosy">
+                    <h2>th-rosy</h2>
+                </div>
+                <div gird-area="lower-third" class="th-rainy">
+                    <h2>th-rainy</h2>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="gradientDarkTop" class="th-rosy">
+            <amp-story-grid-layer template="vertical" class="gradient-dark-top ">
+                <div class="light-color">
+                    <h1>
+                        Gradient Top Dark th-rosy
+                    </h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="gradientDarkBottom" class="th-rosy">
+            <amp-story-grid-layer template="vertical" class="gradient-dark-bottom ">
+                <div class="light-color">
+                    <h1>
+                        Gradient Bottom Dark th-mild
+                    </h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="gradientLightTop" class="th-mild">
+            <amp-story-grid-layer template="vertical" class="gradient-light-top">
+                <div class="light-color">
+                    <h1>
+                        Gradient Top Light th-mild
+                    </h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="gradientLightBottom" class="th-mild">
+            <amp-story-grid-layer template="vertical" class="gradient-light-bottom ">
+                <div class="light-color">
+                    <h1>
+                        Gradient Bottom Light th-rosy
+                    </h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="leftToTop" class="sideToTop th-rainy">
+            <amp-story-grid-layer template="thirds" position="landscape-half-left">
+                <div class="grid-area">
+                    <h1>1. Mobile goes bottom</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" position="landscape-half-right">
+                <div>
+                    <h1>2. Mobile goes top </h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="rightToTop" class="sideToTop th-mild light-color">
+            <amp-story-grid-layer template="vertical" position="landscape-half-left">
+                <div>
+                    <h1>1. Mobile goes up</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds" position="landscape-half-right">
+                <div class="grid-area">
+                    <h1>2. Mobile goes bottom </h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="leftToTopImg" class="sideToTop th-mild light-color" >
+            <amp-story-grid-layer template="vertical" position="landscape-half-left">
+                <div>
+                    <amp-img src="assets/16per9.jpg" layout="fill" width="1024"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds" position="landscape-half-right">
+                <div class="grid-area">
+                    <h1>2. Mobile goes bottom </h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="rightToBottomImg" class="sideToTop th-mild light-color">
+            <amp-story-grid-layer template="thirds" position="landscape-half-left">
+                <div class="grid-area">
+                    <amp-img src="assets/16per9.jpg" layout="fill" width="1024"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" position="landscape-half-right">
+                <div>
+                    <h1>1. Mobile goes top </h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- responsive image load  -->
+        <amp-story-page id="responsiveImage">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="assets/16per9.jpg" layout="responsive" width="1024" height="576"></amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="center-text light-color gradient-dark-top">  
+                <div>
+                    <h1>image size 1024x576</h1>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="responsiveImage2">
+            <amp-story-grid-layer template="fill" class="noedge">
+                <amp-img media="(min-width: 750px)" src="assets/16per9.jpg" width="16" height="9" layout="responsive">
+                </amp-img>
+                <amp-img media="(max-width: 750px)" src="assets/9per16.jpg" width="9" height="16" layout="responsive">
+                </amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="center-text light-color gradient-dark-top">  
+                <div>
+                    <h2>loads for media-screen > 750 image size 1024x576 </h2>
+                    <h2>loads for media-screen less than 750 image size 576x1024 </h2>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+    </amp-story>
+</body>
+
+</html>
